@@ -355,8 +355,10 @@ function App() {
               src="https://www.google.com/maps?q=11.1459722,106.8439167&hl=vi&z=17&output=embed"
               width="100%"
               height="300"
-              style={{ border: 0, borderRadius: '8px', pointerEvents: 'none' }}
+              frameBorder="0"
+              style={{ border: 0, borderRadius: '8px' }}
               loading="lazy"
+              allowFullScreen={true}
               referrerPolicy="no-referrer-when-downgrade"
               title="Văn phòng ấp Tân Thành 3"
             ></iframe>
@@ -400,8 +402,10 @@ function App() {
               src="https://www.google.com/maps?q=10.2395159,106.3786305&hl=vi&z=17&output=embed"
               width="100%"
               height="300"
-              style={{ border: 0, borderRadius: '8px', pointerEvents: 'none' }}
+              frameBorder="0"
+              style={{ border: 0, borderRadius: '8px' }}
               loading="lazy"
+              allowFullScreen={true}
               referrerPolicy="no-referrer-when-downgrade"
               title="TTC Palace Bến Tre"
             ></iframe>
