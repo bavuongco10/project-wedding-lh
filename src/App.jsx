@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './App.css'
@@ -13,6 +13,7 @@ function App() {
   })
 
   const [lightboxImage, setLightboxImage] = useState(null)
+  const audioRef = useRef(null)
 
   useEffect(() => {
     AOS.init({
@@ -45,6 +46,35 @@ function App() {
     const interval = setInterval(updateCountdown, 1000)
 
     return () => clearInterval(interval)
+  }, [])
+
+  // Auto-play music on page load
+  useEffect(() => {
+    const playAudio = async () => {
+      if (audioRef.current) {
+        try {
+          audioRef.current.volume = 0.7
+          await audioRef.current.play()
+        } catch (error) {
+          // Autoplay was prevented by browser - user interaction required
+          console.log('Autoplay prevented:', error)
+          // Optionally, play on first user interaction
+          const playOnInteraction = () => {
+            if (audioRef.current) {
+              audioRef.current.play().catch(() => {})
+            }
+            document.removeEventListener('click', playOnInteraction)
+            document.removeEventListener('touchstart', playOnInteraction)
+          }
+          document.addEventListener('click', playOnInteraction, { once: true })
+          document.addEventListener('touchstart', playOnInteraction, { once: true })
+        }
+      }
+    }
+
+    // Small delay to ensure audio is loaded
+    const timer = setTimeout(playAudio, 500)
+    return () => clearTimeout(timer)
   }, [])
 
   const pad = (num) => (num < 10 ? '0' : '') + num
@@ -342,6 +372,15 @@ function App() {
           </div>
         </div>
       )}
+
+      {/* Background Music */}
+      <audio
+        ref={audioRef}
+        src="/lh/song.mp3"
+        loop
+        preload="auto"
+        style={{ display: 'none' }}
+      />
     </div>
   )
 }
