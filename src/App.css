@@ -813,6 +813,20 @@ img {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(143, 119, 91, 0.15);
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.venue-map:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(143, 119, 91, 0.25);
+}
+
+.venue-map:active {
+  transform: translateY(0);
 }
 
 .venue-map iframe {
@@ -821,6 +835,7 @@ img {
   border: 0;
   border-radius: 8px;
   display: block;
+  pointer-events: none;
 }
 
 .date-highlight {

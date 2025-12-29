@@ -134,7 +134,7 @@ function App() {
         <div className="mainBanner--img" data-aos="zoom-out-up" data-aos-duration="1500">
           <img 
             src="/lh/1.jpeg" 
-            alt="Huy & Ái Linh Wedding" 
+            alt="Minh Huy & Ái Linh Wedding" 
             loading="eager"
             fetchPriority="high"
             onClick={() => openLightbox('/lh/1.jpeg')}
@@ -142,7 +142,7 @@ function App() {
           />
         </div>
         <div className="mainBanner--content">
-          <h1 data-aos-delay="700" data-aos="zoom-out-up" data-aos-duration="1000">Huy & Ái Linh</h1>
+          <h1 data-aos-delay="700" data-aos="zoom-out-up" data-aos-duration="1000">Minh Huy & Ái Linh</h1>
           <h2 data-aos-delay="1000" data-aos="zoom-out-up" data-aos-duration="1000">HERE BEGINS THE REST OF OUR STORY</h2>
         </div>
       </div>
@@ -259,7 +259,7 @@ function App() {
               <span className="img1">
                 <img 
                   src="/lh/2.jpeg" 
-                  alt="Huy & Ái Linh" 
+                  alt="Minh Huy & Ái Linh" 
                   loading="lazy"
                   onClick={() => openLightbox('/lh/2.jpeg')}
                   style={{ cursor: 'pointer' }}
@@ -279,7 +279,7 @@ function App() {
               <span className="img1">
                 <img 
                   src="/lh/4.jpeg" 
-                  alt="Huy & Ái Linh" 
+                  alt="Minh Huy & Ái Linh" 
                   loading="lazy"
                   onClick={() => openLightbox('/lh/4.jpeg')}
                   style={{ cursor: 'pointer' }}
@@ -343,18 +343,24 @@ function App() {
               <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Khai tiệc: <strong>11h30</strong></span>
             </span>
           </p>
-          <div className="venue-map" data-aos="zoom-out-up" data-aos-duration="1500">
+          <a 
+            href="https://www.google.com/maps/dir/?api=1&destination=11.1459722,106.8439167"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="venue-map"
+            data-aos="zoom-out-up"
+            data-aos-duration="1500"
+          >
             <iframe
               src="https://www.google.com/maps?q=11.1459722,106.8439167&hl=vi&z=17&output=embed"
               width="100%"
               height="300"
-              style={{ border: 0, borderRadius: '8px' }}
-              allowFullScreen=""
+              style={{ border: 0, borderRadius: '8px', pointerEvents: 'none' }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Văn phòng ấp Tân Thành 3"
             ></iframe>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -382,18 +388,24 @@ function App() {
               <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Vào tiệc: <strong>11h30</strong></span>
             </span>
           </p>
-          <div className="venue-map" data-aos="zoom-out-up" data-aos-duration="1500">
+          <a 
+            href="https://www.google.com/maps/dir/?api=1&destination=10.2395159,106.3786305"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="venue-map"
+            data-aos="zoom-out-up"
+            data-aos-duration="1500"
+          >
             <iframe
               src="https://www.google.com/maps?q=10.2395159,106.3786305&hl=vi&z=17&output=embed"
               width="100%"
               height="300"
-              style={{ border: 0, borderRadius: '8px' }}
-              allowFullScreen=""
+              style={{ border: 0, borderRadius: '8px', pointerEvents: 'none' }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="TTC Palace Bến Tre"
             ></iframe>
-          </div>
+          </a>
         </div>
       </section>
 
