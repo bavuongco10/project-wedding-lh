@@ -254,8 +254,12 @@ function App() {
         <div className="chapter--wrap">
           <div className="chapter--content" data-aos="zoom-in-right" data-aos-duration="1500">
             <h4>A New chapter <br />begins</h4>
-            <p>Hạnh phúc sẽ trọn vẹn hơn khi có bạn <br className="br01" />
-              cùng chung vui <br className="br02" /> trong ngày trọng đại này <br className="br01" />của chúng mình.</p>
+            <p className="chapter-text">
+              <span className="text-line">Hạnh phúc sẽ trọn vẹn hơn khi có bạn</span>
+              <span className="text-line">cùng chung vui</span>
+              <span className="text-line">trong ngày trọng đại này</span>
+              <span className="text-line">của chúng mình.</span>
+            </p>
           </div>
           <div className="chapter--imgs" data-aos="zoom-in-left" data-aos-duration="1500">
             <div className="chapter--imgs-top">

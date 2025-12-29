@@ -381,6 +381,22 @@ img {
   margin: 0;
 }
 
+.chapter--content .chapter-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  line-height: 1em;
+  font-size: 1.7vw;
+  color: #2b241b;
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-weight: 300;
+}
+
+.chapter--content .chapter-text .text-line {
+  display: block;
+}
+
 .chapter--imgs {
   position: relative;
   width: 68.75%;
@@ -1129,6 +1145,12 @@ footer {
 
   .chapter--content p {
     font-size: 3.5vw;
+  }
+
+  .chapter-text {
+    font-size: 4vw;
+    gap: 0.5em;
+    line-height: 1.7em;
   }
 
   .wedding-info {
