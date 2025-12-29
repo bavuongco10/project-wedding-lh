@@ -170,7 +170,10 @@ img {
 /* Countdown */
 .countDown {
   position: relative;
-  padding: 70px 0 73px;
+  padding: 70px 20px 73px;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .countDown--title {
@@ -190,6 +193,8 @@ img {
   display: flex;
   gap: 3.125vw;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .countDown--time dl {
@@ -200,6 +205,7 @@ img {
   gap: 20px;
   min-width: 100px;
   text-align: center;
+  flex: 0 1 auto;
 }
 
 .countDown--time dl dt {
@@ -1003,8 +1009,18 @@ footer {
     font-size: 8vw;
   }
 
+  .countDown {
+    padding: 50px 15px;
+  }
+
   .countDown--time {
     gap: 4vw;
+    flex-wrap: wrap;
+  }
+
+  .countDown--time dl {
+    min-width: 80px;
+    gap: 15px;
   }
 
   .countDown--time dl dt {
@@ -1222,7 +1238,16 @@ footer {
   }
 
   .countDown {
-    padding: 40px 0;
+    padding: 40px 15px;
+  }
+
+  .countDown--time {
+    gap: 3vw;
+  }
+
+  .countDown--time dl {
+    min-width: 70px;
+    gap: 12px;
   }
 
   .chapter--imgs-top,
