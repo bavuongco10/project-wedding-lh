@@ -1,0 +1,1136 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap");
+
+@font-face {
+  font-family: "SVN-Mightiest";
+  src: url("https://tramcuonggetmarried.site/wp-content/themes/main/fonts/SVN-Mightiest-Regular.woff2") format("woff2"),
+       url("https://tramcuonggetmarried.site/wp-content/themes/main/fonts/SVN-Mightiest-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --content-width: 1260px;
+  --font-arial: Arial, Helvetica, sans-serif;
+  --color-primary: #e00327;
+  --color-secondary: #e00327;
+  --color-black: #333333;
+  --color-gray: #cccccc;
+  --text-line-height: 1.8em;
+  --font-family: "Crimson Pro", serif;
+  --font-heading: "Playfair Display", serif;
+  --font-tc: "SVN-Mightiest";
+  --body-color: #000;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  background: #f4f1ec;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  -webkit-text-size-adjust: none;
+  color: var(--body-color);
+  font-family: var(--font-family);
+}
+
+#wrapper {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.6em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  font-family: var(--font-family);
+}
+
+p {
+  margin-bottom: 1.85em;
+  line-height: 1.8em;
+  font-family: var(--font-family);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  flex-shrink: 0;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Main Banner */
+.mainBanner {
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.mainBanner--img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mainBanner--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.mainBanner--content {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  padding: 30px 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.mainBanner--content::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), transparent); */
+  z-index: -1;
+  border: none;
+  border-radius: 0;
+}
+
+.mainBanner--content h1,
+.mainBanner--content h2 {
+  position: relative;
+}
+
+.mainBanner--content h1 {
+  font-weight: 400;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1em;
+  color: #fff;
+  font-family: var(--font-heading);
+  display: block;
+  white-space: nowrap;
+  margin-bottom: 0.5em;
+  text-shadow: 
+    0 2px 20px rgba(0, 0, 0, 0.8),
+    0 4px 10px rgba(0, 0, 0, 0.6),
+    0 1px 3px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.02em;
+}
+
+.mainBanner--content h2 {
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.3em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #fff;
+  font-family: var(--font-family);
+  text-shadow: 
+    0 2px 15px rgba(0, 0, 0, 0.8),
+    0 3px 8px rgba(0, 0, 0, 0.6),
+    0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* Countdown */
+.countDown {
+  position: relative;
+  padding: 70px 0 73px;
+}
+
+.countDown--title {
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 4.0625vw;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #8f775b;
+  text-align: center;
+}
+
+.countDown--time {
+  position: relative;
+  display: flex;
+  gap: 3.125vw;
+  justify-content: center;
+}
+
+.countDown--time dl {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  gap: 20px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.countDown--time dl dt {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 3.75vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2b241b;
+  margin: 0;
+}
+
+.countDown--time dl dd {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.875vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #8f775b;
+  margin: 0;
+}
+
+.countDown .endTime {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 3.75vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2b241b;
+}
+
+/* Calendar */
+.monthTime {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 80px;
+}
+
+.monthTime .countDown--title {
+  margin-bottom: 0.358974359em;
+}
+
+.monthTime--calendar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.monthTime--calendar .rows {
+  position: relative;
+  display: flex;
+}
+
+.monthTime--calendar .rows span {
+  position: relative;
+  width: 4em;
+  height: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: max(1.5625vw, 20px);
+  text-align: center;
+  vertical-align: middle;
+  color: #2b241b;
+  z-index: 1;
+}
+
+.monthTime--calendar .rows span.heart {
+  color: #fff !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2em 0;
+}
+
+.monthTime--calendar .rows span.heart .date-label {
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+}
+
+.monthTime--calendar .rows span.heart .event-label {
+  position: absolute;
+  bottom: -2em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.5em;
+  font-weight: 600;
+  color: #8f775b;
+  white-space: nowrap;
+  z-index: 3;
+  font-family: var(--font-family);
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.monthTime--calendar .rows span i {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3em;
+  height: 3.2em;
+}
+
+.monthTime--calendar .rows span i img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.monthTime--calendar .rows.monthTime--week span {
+  color: #8f775b !important;
+}
+
+/* Chapter */
+.chapter {
+  position: relative;
+  padding: 0 0;
+}
+
+.chapter::before {
+  display: none;
+}
+
+.chapter--wrap {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  max-width: 87.7604166667vw;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.chapter--content {
+  position: relative;
+  width: 550px;
+}
+
+.chapter--content h4 {
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 4.0625vw;
+  line-height: 1.3em;
+  text-transform: capitalize;
+  color: #8f775b;
+  margin: 0 0 0.5em;
+  letter-spacing: 0.03em;
+}
+
+.chapter--content p {
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.5625vw;
+  line-height: 1.2em;
+  letter-spacing: 2%;
+  margin: 0;
+}
+
+.chapter--imgs {
+  position: relative;
+  width: 68.75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.chapter--imgs > div {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.chapter--imgs-top {
+  max-height: 654px;
+}
+
+.chapter--imgs-top .img1 {
+  max-height: 100%;
+  width: 25.8333333333vw;
+  text-align: right;
+}
+
+.chapter--imgs-top img {
+  max-height: 100%;
+  width: 100%;
+}
+
+.chapter--imgs-bot {
+  max-height: 34.0625vw;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.chapter--imgs-bot .img1 {
+  display: block;
+  position: relative;
+  width: auto;
+  max-height: 100%;
+  width: 25.8333333333vw;
+  text-align: right;
+}
+
+.chapter--imgs-bot .img1.squad {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.chapter--imgs-bot .img1.squad img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.chapter--imgs-bot img {
+  max-height: 100%;
+  width: 100%;
+}
+
+/* Wedding Information */
+.wedding-info {
+  position: relative;
+  padding: 60px 60px;
+  max-width: 1100px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #fefcfb 0%, #faf9f7 100%);
+  border: none;
+  box-shadow: 
+    0 20px 60px rgba(143, 119, 91, 0.1),
+    0 0 0 1px rgba(143, 119, 91, 0.08) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.wedding-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.3) 20%, 
+    rgba(174, 150, 116, 0.5) 50%, 
+    rgba(174, 150, 116, 0.3) 80%, 
+    transparent 100%);
+}
+
+.wedding-info::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.3) 20%, 
+    rgba(174, 150, 116, 0.5) 50%, 
+    rgba(174, 150, 116, 0.3) 80%, 
+    transparent 100%);
+}
+
+.wedding-info .countDown--title {
+  margin-bottom: 3em;
+  position: relative;
+  padding-bottom: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #8f775b;
+}
+
+.wedding-info .countDown--title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.3) 20%, 
+    rgba(174, 150, 116, 0.6) 50%, 
+    rgba(174, 150, 116, 0.3) 80%, 
+    transparent 100%);
+}
+
+.wedding-info .countDown--title::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: rgba(174, 150, 116, 0.4);
+}
+
+.wedding-info--families {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.family-info {
+  flex: 1;
+  text-align: center;
+  padding: 45px 35px;
+  background: #ffffff;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 
+    0 8px 30px rgba(143, 119, 91, 0.08),
+    0 0 0 1px rgba(174, 150, 116, 0.12);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.family-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.4) 50%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.family-info:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 40px rgba(143, 119, 91, 0.12),
+    0 0 0 1px rgba(174, 150, 116, 0.2);
+}
+
+.family-info:hover::before {
+  opacity: 1;
+}
+
+.family-title {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 2.4vw;
+  color: #8f775b;
+  margin-bottom: 2em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 1.2em;
+}
+
+.family-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.5) 50%, 
+    transparent 100%);
+}
+
+.family-details {
+  font-family: var(--font-family);
+  font-size: 1.7vw;
+  line-height: 2.4em;
+  color: #2b241b;
+}
+
+.family-member {
+  margin-bottom: 1em;
+  font-weight: 400;
+  font-size: 1.8vw;
+  letter-spacing: 0.03em;
+  color: #3d3429;
+}
+
+.family-address {
+  margin-top: 2em;
+  font-style: normal;
+  color: #8f775b;
+  font-size: 1.55vw;
+  line-height: 2em;
+  padding-top: 2em;
+  border-top: 1px solid rgba(174, 150, 116, 0.2);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.wedding-info--couple {
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 1.8vw;
+  line-height: 2.6em;
+  color: #2b241b;
+  padding-top: 3em;
+  margin-top: 3em;
+  border-top: 1px solid rgba(174, 150, 116, 0.25);
+  position: relative;
+}
+
+.wedding-info--couple::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.4) 50%, 
+    transparent 100%);
+}
+
+.couple-info {
+  margin: 0.8em 0;
+  font-weight: 400;
+  font-size: 1.9vw;
+  letter-spacing: 0.03em;
+  color: #3d3429;
+}
+
+/* Ceremony Sections */
+.ceremony-section {
+  position: relative;
+  padding: 60px 60px;
+  max-width: 1100px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #fefcfb 0%, #faf9f7 100%);
+  border: none;
+  box-shadow: 
+    0 20px 60px rgba(143, 119, 91, 0.1),
+    0 0 0 1px rgba(143, 119, 91, 0.08) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ceremony-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.3) 20%, 
+    rgba(174, 150, 116, 0.5) 50%, 
+    rgba(174, 150, 116, 0.3) 80%, 
+    transparent 100%);
+}
+
+.ceremony-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.3) 20%, 
+    rgba(174, 150, 116, 0.5) 50%, 
+    rgba(174, 150, 116, 0.3) 80%, 
+    transparent 100%);
+}
+
+.ceremony-section .countDown--title {
+  margin-bottom: 2.5em;
+  position: relative;
+  padding-bottom: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #8f775b;
+}
+
+.ceremony-section .countDown--title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(174, 150, 116, 0.3) 20%, 
+    rgba(174, 150, 116, 0.6) 50%, 
+    rgba(174, 150, 116, 0.3) 80%, 
+    transparent 100%);
+}
+
+.ceremony-section .countDown--title::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: rgba(174, 150, 116, 0.4);
+}
+
+.ceremony-details {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 1.75vw;
+  line-height: 2.2em;
+  color: #2b241b;
+}
+
+.ceremony-text {
+  margin-bottom: 2em;
+  font-weight: 500;
+  font-size: 2vw;
+  line-height: 2.4em;
+}
+
+.ceremony-reception {
+  color: #2b241b;
+  font-style: normal;
+  line-height: 2.5em;
+  font-size: 1.85vw;
+}
+
+.reception-label {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #2b241b;
+  font-style: normal;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.venue-name {
+  font-weight: 700;
+  font-size: 1.3em;
+  color: #2b241b;
+  display: block;
+  margin: 0.8em 0 0.5em 0;
+  letter-spacing: 0.02em;
+  line-height: 1.4em;
+}
+
+.venue-hall {
+  font-weight: 600;
+  font-size: 1.15em;
+  color: #8f775b;
+  display: block;
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+
+.venue-details {
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #8f775b;
+  display: block;
+  margin-bottom: 1em;
+  line-height: 1.6em;
+}
+
+.venue-address {
+  font-weight: 600;
+  font-size: 1.15em;
+  color: #8f775b;
+  display: block;
+  margin-bottom: 1em;
+  line-height: 1.6em;
+}
+
+.date-highlight {
+  color: #2b241b;
+  font-weight: 700;
+  font-size: 1.15em;
+  background: linear-gradient(180deg, transparent 60%, rgba(143, 119, 91, 0.2) 60%, rgba(143, 119, 91, 0.2) 85%, transparent 85%);
+  padding: 0 0.2em;
+  display: inline-block;
+}
+
+.time-highlight {
+  color: #2b241b;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.time-highlight strong {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #8f775b;
+  background: rgba(143, 119, 91, 0.15);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  background-color: #2b241b;
+  padding: 4.1666666667vw;
+}
+
+.footer--wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4.1666666667vw;
+}
+
+.footer--img {
+  position: relative;
+}
+
+.footer--img img {
+  width: 100%;
+  height: auto;
+}
+
+.footer--content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 0;
+  gap: 20px;
+}
+
+.footer--content .icon {
+  position: relative;
+}
+
+.footer--content .label {
+  position: relative;
+  color: #ae9674;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 2.1875vw;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .chapter--wrap {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .chapter--content {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .chapter--imgs {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainBanner {
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  .mainBanner--content {
+    top: 8%;
+    padding: 25px 15px;
+  }
+
+  .mainBanner--content h1 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    white-space: normal;
+  }
+
+  .mainBanner--content h2 {
+    font-size: clamp(0.875rem, 3.5vw, 1.25rem);
+  }
+
+  .countDown--title {
+    font-size: 8vw;
+  }
+
+  .countDown--time {
+    gap: 4vw;
+  }
+
+  .countDown--time dl dt {
+    font-size: 8vw;
+  }
+
+  .countDown--time dl dd {
+    font-size: 4vw;
+  }
+
+  .monthTime--calendar .rows span {
+    font-size: max(3vw, 16px);
+    width: 3em;
+    height: 2em;
+  }
+
+  .monthTime--calendar .rows span.heart {
+    padding-bottom: 2em;
+  }
+
+  .monthTime--calendar .rows span.heart .event-label {
+    font-size: 0.5em;
+    bottom: -2em;
+  }
+
+  .chapter--content h4 {
+    font-size: 8vw;
+  }
+
+  .chapter--content p {
+    font-size: 3.5vw;
+  }
+
+  .wedding-info {
+    padding: 45px 30px;
+    margin: 40px 20px;
+  }
+
+  .wedding-info .countDown--title {
+    margin-bottom: 2.5em;
+    padding-bottom: 1em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+
+  .wedding-info--families {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+  }
+
+  .family-info {
+    padding: 40px 30px;
+  }
+
+  .family-title {
+    font-size: 6vw;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+
+  .family-details {
+    font-size: 4.2vw;
+    line-height: 2.4em;
+  }
+
+  .family-member {
+    font-size: 4.6vw;
+    margin-bottom: 1em;
+    font-weight: 400;
+  }
+
+  .family-address {
+    font-size: 3.9vw;
+    margin-top: 2em;
+    padding-top: 2em;
+    line-height: 2em;
+    font-weight: 300;
+  }
+
+  .wedding-info--couple {
+    font-size: 4.6vw;
+    line-height: 2.6em;
+    padding-top: 2.5em;
+    margin-top: 2.5em;
+  }
+
+  .couple-info {
+    font-size: 5vw;
+    margin: 0.8em 0;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .ceremony-section {
+    padding: 45px 30px;
+    margin: 40px 20px;
+  }
+
+  .ceremony-section .countDown--title {
+    margin-bottom: 2.5em;
+    padding-bottom: 1em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+
+  .ceremony-details {
+    font-size: 4.5vw;
+    max-width: 100%;
+    line-height: 2.5em;
+  }
+
+  .ceremony-text {
+    font-size: 5.5vw;
+    line-height: 2.8em;
+    margin-bottom: 2em;
+  }
+
+  .ceremony-reception {
+    font-size: 4.8vw;
+    line-height: 2.8em;
+  }
+
+  .reception-label {
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+  }
+
+  .venue-name {
+    font-size: 1.35em;
+    margin: 1em 0 0.6em 0;
+  }
+
+  .venue-hall {
+    font-size: 1.2em;
+    margin-bottom: 0.6em;
+  }
+
+  .venue-details {
+    font-size: 1.15em;
+    margin-bottom: 1.2em;
+  }
+
+  .venue-address {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+  }
+
+  .date-highlight {
+    font-size: 1.2em;
+    padding: 0.1em 0.3em;
+  }
+
+  .time-highlight strong {
+    font-size: 1.25em;
+    padding: 0.15em 0.5em;
+  }
+
+
+  footer {
+    padding: 6vw 20px;
+  }
+
+  .footer--wrap {
+    flex-direction: column;
+  }
+
+  .footer--content .label {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainBanner {
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  .mainBanner--content {
+    top: 6%;
+    padding: 20px 12px;
+  }
+
+  .mainBanner--content::before {
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+  }
+
+  .mainBanner--content h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .mainBanner--content h2 {
+    font-size: clamp(0.75rem, 3vw, 1rem);
+  }
+
+  .countDown {
+    padding: 40px 0;
+  }
+
+  .chapter--imgs-top,
+  .chapter--imgs-bot {
+    max-height: none;
+  }
+
+  .chapter--imgs-top .img1,
+  .chapter--imgs-bot .img1 {
+    width: 100%;
+  }
+
+}
