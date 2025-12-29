@@ -12,6 +12,8 @@ function App() {
     ended: false
   })
 
+  const [lightboxImage, setLightboxImage] = useState(null)
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -47,6 +49,30 @@ function App() {
 
   const pad = (num) => (num < 10 ? '0' : '') + num
 
+  const openLightbox = (imageSrc) => {
+    setLightboxImage(imageSrc)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeLightbox = () => {
+    setLightboxImage(null)
+    document.body.style.overflow = ''
+  }
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && lightboxImage) {
+        setLightboxImage(null)
+        document.body.style.overflow = ''
+      }
+    }
+
+    if (lightboxImage) {
+      document.addEventListener('keydown', handleEscape)
+      return () => document.removeEventListener('keydown', handleEscape)
+    }
+  }, [lightboxImage])
+
   return (
     <div id="wrapper">
       {/* Main Banner */}
@@ -57,6 +83,8 @@ function App() {
             alt="Huy & Ái Linh Wedding" 
             loading="eager"
             fetchPriority="high"
+            onClick={() => openLightbox('/lh/1.jpeg')}
+            style={{ cursor: 'pointer' }}
           />
         </div>
         <div className="mainBanner--content">
@@ -179,6 +207,8 @@ function App() {
                   src="/lh/2.jpeg" 
                   alt="Huy & Ái Linh" 
                   loading="lazy"
+                  onClick={() => openLightbox('/lh/2.jpeg')}
+                  style={{ cursor: 'pointer' }}
                 />
               </span>
             </div>
@@ -188,6 +218,8 @@ function App() {
                   src="/lh/3.jpeg" 
                   alt="Wedding Memories" 
                   loading="lazy"
+                  onClick={() => openLightbox('/lh/3.jpeg')}
+                  style={{ cursor: 'pointer' }}
                 />
               </span>
               <span className="img1">
@@ -195,6 +227,8 @@ function App() {
                   src="/lh/4.jpeg" 
                   alt="Huy & Ái Linh" 
                   loading="lazy"
+                  onClick={() => openLightbox('/lh/4.jpeg')}
+                  style={{ cursor: 'pointer' }}
                 />
               </span>
             </div>
@@ -279,6 +313,8 @@ function App() {
               src="/lh/5.jpeg" 
               alt="Wedding Celebration" 
               loading="lazy"
+              onClick={() => openLightbox('/lh/5.jpeg')}
+              style={{ cursor: 'pointer' }}
             />
           </div>
           <div className="footer--content" data-aos="zoom-in-left" data-aos-duration="1500">
@@ -294,6 +330,18 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Lightbox Modal */}
+      {lightboxImage && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <button className="lightbox-close" onClick={closeLightbox} aria-label="Close">
+            ×
+          </button>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={lightboxImage} alt="Full size" />
+          </div>
+        </div>
+      )}
     </div>
   )
 }
