@@ -1,0 +1,21 @@
+{
+  "name": "Wedding Huy & Ái Linh",
+  "short_name": "Wedding LH",
+  "description": "Trần Minh Huy & Nguyễn Thị Ái Linh - Chúng mình cưới!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f1ec",
+  "theme_color": "#8f775b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "social"],
+  "lang": "vi"
+}
+
