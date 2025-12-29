@@ -329,9 +329,9 @@ function App() {
             (Nhằm ngày 30 tháng 11 năm Ất Tỵ)
           </p>
           <p className="ceremony-reception">
-            <span className="reception-label">Tiệc:</span><br />
-            <span className="venue-name">Văn phòng ấp Tân Thành 3</span><br />
-            <span className="venue-details">(đối diện trường Mầm non Hoa Phong Lan) xã Bắc Tân Uyên – TP. HCM</span><br />
+            <span className="reception-label">Tiệc:</span>
+            <span className="venue-name">Văn phòng ấp Tân Thành 3</span>
+            <span className="venue-details">(đối diện trường Mầm non Hoa Phong Lan) <br/> xã Bắc Tân Uyên – TP. HCM</span>
             <span className="reception-times">
               <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Khai tiệc: <strong>11h30</strong></span>
             </span>
@@ -348,10 +348,10 @@ function App() {
             (Nhằm ngày 06 tháng 12 năm Ất Tỵ)
           </p>
           <p className="ceremony-reception">
-            <span className="reception-label">Tiệc:</span><br />
-            <span className="venue-name">Trung tâm Hội nghị và tiệc cưới TTC Palace Bến Tre</span><br />
-            <span className="venue-hall">(sảnh Long Phụng)</span><br />
-            <span className="venue-address">16 Hai Bà Trung - Phường An Hội – Tỉnh Bến Tre</span><br />
+            <span className="reception-label">Tiệc:</span>
+            <span className="venue-name">Trung tâm Hội nghị và tiệc cưới TTC Palace Bến Tre</span>
+            <span className="venue-hall">(sảnh Long Phụng)</span>
+            <span className="venue-address">16 Hai Bà Trung - Phường An Hội – Tỉnh Bến Tre</span>
             <span className="reception-times">
               <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Vào tiệc: <strong>11h30</strong></span>
             </span>

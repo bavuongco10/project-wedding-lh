@@ -485,17 +485,23 @@ img {
     transparent 100%);
 }
 
-.wedding-info .countDown--title {
+.wedding-info .countDown--title,
+.ceremony-section .countDown--title {
   margin-bottom: 0.8em;
   position: relative;
   padding-bottom: 0.3em;
   font-weight: 300;
+  font-size: 3vw;
   letter-spacing: 0.15em;
   color: #8f775b;
-  font-size: 3vw;
+  text-transform: capitalize;
+  font-family: var(--font-heading);
+  line-height: 100%;
+  text-align: center;
 }
 
-.wedding-info .countDown--title::after {
+.wedding-info .countDown--title::after,
+.ceremony-section .countDown--title::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -511,7 +517,8 @@ img {
     transparent 100%);
 }
 
-.wedding-info .countDown--title::before {
+.wedding-info .countDown--title::before,
+.ceremony-section .countDown--title::before {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -704,42 +711,7 @@ img {
     transparent 100%);
 }
 
-.ceremony-section .countDown--title {
-  margin-bottom: 0.8em;
-  position: relative;
-  padding-bottom: 0.3em;
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  color: #8f775b;
-  font-size: 3vw;
-}
 
-.ceremony-section .countDown--title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px;
-  height: 1px;
-  background: linear-gradient(to right, 
-    transparent 0%, 
-    rgba(174, 150, 116, 0.3) 20%, 
-    rgba(174, 150, 116, 0.6) 50%, 
-    rgba(174, 150, 116, 0.3) 80%, 
-    transparent 100%);
-}
-
-.ceremony-section .countDown--title::before {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 1px;
-  background: rgba(174, 150, 116, 0.4);
-}
 
 .ceremony-details {
   max-width: 100%;
@@ -1059,12 +1031,17 @@ footer {
     margin: 15px 15px;
   }
 
-  .wedding-info .countDown--title {
+  .wedding-info .countDown--title,
+  .ceremony-section .countDown--title {
     margin-bottom: 0.6em;
     padding-bottom: 0.25em;
     font-weight: 300;
-    letter-spacing: 0.1em;
     font-size: 6vw;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    font-family: var(--font-heading);
+    line-height: 100%;
+    text-align: center;
   }
 
   .wedding-info--families {
@@ -1123,13 +1100,6 @@ footer {
     margin: 15px 15px;
   }
 
-  .ceremony-section .countDown--title {
-    margin-bottom: 0.6em;
-    padding-bottom: 0.25em;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    font-size: 6vw;
-  }
 
   .ceremony-details {
     font-size: 4.5vw;
@@ -1138,7 +1108,7 @@ footer {
   }
 
   .ceremony-text {
-    font-size: 5.5vw;
+    font-size: 5vw;
     line-height: 1.8em;
     margin-bottom: 1.2em;
   }
