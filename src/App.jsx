@@ -333,7 +333,7 @@ function App() {
         <div className="wedding-info--couple" data-aos="zoom-out-up" data-aos-duration="1500">
           <div className="couple-portraits">
             <div className="couple-portrait">
-              <div className="portrait-image">
+              <div className="portrait-image" onClick={() => openLightbox('/lh/huy.jpeg')}>
                 <img 
                   src="/lh/huy.jpeg" 
                   alt="Trần Minh Huy" 
@@ -347,7 +347,7 @@ function App() {
               <p className="couple-relation">(Trưởng nam)</p>
             </div>
             <div className="couple-portrait">
-              <div className="portrait-image portrait-image-linh">
+              <div className="portrait-image portrait-image-linh" onClick={() => openLightbox('/lh/linh.jpeg')}>
                 <img 
                   src="/lh/linh.jpeg" 
                   alt="Nguyễn Thị Ái Linh" 

@@ -386,7 +386,7 @@ img {
   flex-direction: column;
   gap: 0.6em;
   line-height: 1em;
-  font-size: 4vw;
+  font-size: 1.7vw;
   color: #2b241b;
   text-align: left;
   letter-spacing: 0.03em;
@@ -695,6 +695,13 @@ img {
   box-shadow: 0 4px 20px rgba(143, 119, 91, 0.2);
   background: #fff;
   position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portrait-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 30px rgba(143, 119, 91, 0.3);
 }
 
 .portrait-image img {
@@ -1147,7 +1154,7 @@ footer {
     font-size: 3.5vw;
   }
 
-  .chapter-text {
+  .chapter--content .chapter-text {
     font-size: 4vw;
     gap: 0.5em;
     line-height: 1.7em;
