@@ -931,10 +931,28 @@ img {
   font-weight: 700;
   font-size: 1.2em;
   color: #8f775b;
-  background: rgba(143, 119, 91, 0.15);
-  padding: 0.1em 0.4em;
-  border-radius: 4px;
-  display: inline-block;
+  padding: 0.2em 0.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.time-highlight strong::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  height: 150%;
+  background-image: url('/lh/heart.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.25;
+  z-index: -1;
 }
 
 /* Footer */
@@ -1303,7 +1321,12 @@ footer {
 
   .time-highlight strong {
     font-size: 1.25em;
-    padding: 0.15em 0.5em;
+    padding: 0.25em 0.7em;
+  }
+
+  .time-highlight strong::before {
+    width: 160%;
+    height: 160%;
   }
 
 
