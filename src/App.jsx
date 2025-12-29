@@ -135,8 +135,11 @@ function App() {
           <img 
             src="/lh/1.jpeg" 
             alt="Minh Huy & Ái Linh Wedding" 
+            width="1920"
+            height="1080"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
             onClick={() => openLightbox('/lh/1.jpeg')}
             style={{ cursor: 'pointer' }}
           />
@@ -217,7 +220,7 @@ function App() {
             <span>17</span>
             <span className="heart heart-vu-quy">
               <span className="date-label">18</span>
-              <i><img src="/lh/heart.svg" alt="Vu Quy" /></i>
+              <i><img src="/lh/heart.svg" alt="Vu Quy" width="48" height="48" loading="lazy" decoding="async" /></i>
               <span className="event-label">Vu Quy</span>
             </span>
           </div>
@@ -260,7 +263,10 @@ function App() {
                 <img 
                   src="/lh/2.jpeg" 
                   alt="Minh Huy & Ái Linh" 
+                  width="800"
+                  height="1000"
                   loading="lazy"
+                  decoding="async"
                   onClick={() => openLightbox('/lh/2.jpeg')}
                   style={{ cursor: 'pointer' }}
                 />
@@ -271,7 +277,10 @@ function App() {
                 <img 
                   src="/lh/3.jpeg" 
                   alt="Wedding Memories" 
+                  width="600"
+                  height="800"
                   loading="lazy"
+                  decoding="async"
                   onClick={() => openLightbox('/lh/3.jpeg')}
                   style={{ cursor: 'pointer' }}
                 />
@@ -280,7 +289,10 @@ function App() {
                 <img 
                   src="/lh/4.jpeg" 
                   alt="Minh Huy & Ái Linh" 
+                  width="600"
+                  height="800"
                   loading="lazy"
+                  decoding="async"
                   onClick={() => openLightbox('/lh/4.jpeg')}
                   style={{ cursor: 'pointer' }}
                 />
@@ -318,14 +330,28 @@ function App() {
           <div className="couple-portraits">
             <div className="couple-portrait">
               <div className="portrait-image">
-                <img src="/lh/huy.jpeg" alt="Trần Minh Huy" />
+                <img 
+                  src="/lh/huy.jpeg" 
+                  alt="Trần Minh Huy" 
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <p className="couple-info">Trần Minh Huy</p>
               <p className="couple-relation">(Trưởng nam)</p>
             </div>
             <div className="couple-portrait">
               <div className="portrait-image portrait-image-linh">
-                <img src="/lh/linh.jpeg" alt="Nguyễn Thị Ái Linh" />
+                <img 
+                  src="/lh/linh.jpeg" 
+                  alt="Nguyễn Thị Ái Linh" 
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <p className="couple-info">Nguyễn Thị Ái Linh</p>
               <p className="couple-relation">(Út Nữ)</p>
@@ -434,7 +460,10 @@ function App() {
             <img 
               src="/lh/5.jpeg" 
               alt="Wedding Celebration" 
+              width="1920"
+              height="1080"
               loading="lazy"
+              decoding="async"
               onClick={() => openLightbox('/lh/5.jpeg')}
               style={{ cursor: 'pointer' }}
             />
@@ -460,7 +489,12 @@ function App() {
             ×
           </button>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <img src={lightboxImage} alt="Full size" />
+            <img 
+              src={lightboxImage} 
+              alt="Full size" 
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
       )}
