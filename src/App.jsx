@@ -58,7 +58,7 @@ function App() {
           audioRef.current.volume = 0.7
           await audioRef.current.play()
           hasPlayed = true
-        } catch (error) {
+        } catch {
           // Autoplay was prevented by browser - will wait for user interaction
           console.log('Autoplay prevented, waiting for user interaction')
         }
@@ -330,12 +330,31 @@ function App() {
           </p>
           <p className="ceremony-reception">
             <span className="reception-label">Tiệc:</span>
-            <span className="venue-name">Văn phòng ấp Tân Thành 3</span>
-            <span className="venue-details">(đối diện trường Mầm non Hoa Phong Lan) <br/> xã Bắc Tân Uyên – TP. HCM</span>
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=11.1459722,106.8439167"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="venue-link"
+            >
+              <span className="venue-name">Văn phòng ấp Tân Thành 3</span>
+              <span className="venue-details">(đối diện trường Mầm non Hoa Phong Lan) <br/> xã Bắc Tân Uyên – TP. HCM</span>
+            </a>
             <span className="reception-times">
               <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Khai tiệc: <strong>11h30</strong></span>
             </span>
           </p>
+          <div className="venue-map" data-aos="zoom-out-up" data-aos-duration="1500">
+            <iframe
+              src="https://www.google.com/maps?q=11.1459722,106.8439167&hl=vi&z=17&output=embed"
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: '8px' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Văn phòng ấp Tân Thành 3"
+            ></iframe>
+          </div>
         </div>
       </section>
 
@@ -349,13 +368,32 @@ function App() {
           </p>
           <p className="ceremony-reception">
             <span className="reception-label">Tiệc:</span>
-            <span className="venue-name">Trung tâm Hội nghị và tiệc cưới TTC Palace Bến Tre</span>
-            <span className="venue-hall">(sảnh Long Phụng)</span>
-            <span className="venue-address">16 Hai Bà Trung - Phường An Hội – Tỉnh Bến Tre</span>
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=10.2395159,106.3786305"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="venue-link"
+            >
+              <span className="venue-name">Trung tâm Hội nghị và tiệc cưới TTC Palace Bến Tre</span>
+              <span className="venue-hall">(sảnh Long Phụng)</span>
+              <span className="venue-address">16 Hai Bà Trưng - Phường An Hội – Tỉnh Bến Tre</span>
+            </a>
             <span className="reception-times">
               <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Vào tiệc: <strong>11h30</strong></span>
             </span>
           </p>
+          <div className="venue-map" data-aos="zoom-out-up" data-aos-duration="1500">
+            <iframe
+              src="https://www.google.com/maps?q=10.2395159,106.3786305&hl=vi&z=17&output=embed"
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: '8px' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="TTC Palace Bến Tre"
+            ></iframe>
+          </div>
         </div>
       </section>
 
