@@ -244,7 +244,9 @@ function App() {
             <span className="reception-label">Tiệc:</span><br />
             <span className="venue-name">Văn phòng ấp Tân Thành 3</span><br />
             <span className="venue-details">(đối diện trường Mầm non Hoa Phong Lan) xã Bắc Tân Uyên – TP. HCM</span><br />
-            <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Khai tiệc: <strong>11h30</strong></span>
+            <span className="reception-times">
+              <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Khai tiệc: <strong>11h30</strong></span>
+            </span>
           </p>
         </div>
       </section>
@@ -262,7 +264,9 @@ function App() {
             <span className="venue-name">Trung tâm Hội nghị và tiệc cưới TTC Palace Bến Tre</span><br />
             <span className="venue-hall">(sảnh Long Phụng)</span><br />
             <span className="venue-address">16 Hai Bà Trung - Phường An Hội – Tỉnh Bến Tre</span><br />
-            <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Vào tiệc: <strong>11h30</strong></span>
+            <span className="reception-times">
+              <span className="time-highlight">Đón khách: <strong>11h</strong></span> | <span className="time-highlight">Vào tiệc: <strong>11h30</strong></span>
+            </span>
           </p>
         </div>
       </section>

@@ -436,9 +436,9 @@ img {
 /* Wedding Information */
 .wedding-info {
   position: relative;
-  padding: 60px 60px;
+  padding: 35px 40px;
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 20px auto;
   background: linear-gradient(135deg, #fefcfb 0%, #faf9f7 100%);
   border: none;
   box-shadow: 
@@ -480,12 +480,13 @@ img {
 }
 
 .wedding-info .countDown--title {
-  margin-bottom: 3em;
+  margin-bottom: 0.8em;
   position: relative;
-  padding-bottom: 1.2em;
+  padding-bottom: 0.3em;
   font-weight: 300;
   letter-spacing: 0.15em;
   color: #8f775b;
+  font-size: 3vw;
 }
 
 .wedding-info .countDown--title::after {
@@ -569,11 +570,11 @@ img {
   font-weight: 300;
   font-size: 2.4vw;
   color: #8f775b;
-  margin-bottom: 2em;
+  margin-bottom: 1.2em;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   position: relative;
-  padding-bottom: 1.2em;
+  padding-bottom: 0.8em;
 }
 
 .family-title::after {
@@ -593,12 +594,12 @@ img {
 .family-details {
   font-family: var(--font-family);
   font-size: 1.7vw;
-  line-height: 2.4em;
+  line-height: 1.8em;
   color: #2b241b;
 }
 
 .family-member {
-  margin-bottom: 1em;
+  margin-bottom: 0.6em;
   font-weight: 400;
   font-size: 1.8vw;
   letter-spacing: 0.03em;
@@ -606,12 +607,12 @@ img {
 }
 
 .family-address {
-  margin-top: 2em;
+  margin-top: 1.2em;
   font-style: normal;
   color: #8f775b;
   font-size: 1.55vw;
-  line-height: 2em;
-  padding-top: 2em;
+  line-height: 1.6em;
+  padding-top: 1.2em;
   border-top: 1px solid rgba(174, 150, 116, 0.2);
   font-weight: 300;
   letter-spacing: 0.02em;
@@ -621,10 +622,10 @@ img {
   text-align: center;
   font-family: var(--font-family);
   font-size: 1.8vw;
-  line-height: 2.6em;
+  line-height: 1.8em;
   color: #2b241b;
-  padding-top: 3em;
-  margin-top: 3em;
+  padding-top: 1.8em;
+  margin-top: 1.8em;
   border-top: 1px solid rgba(174, 150, 116, 0.25);
   position: relative;
 }
@@ -644,7 +645,7 @@ img {
 }
 
 .couple-info {
-  margin: 0.8em 0;
+  margin: 0.5em 0;
   font-weight: 400;
   font-size: 1.9vw;
   letter-spacing: 0.03em;
@@ -654,9 +655,9 @@ img {
 /* Ceremony Sections */
 .ceremony-section {
   position: relative;
-  padding: 60px 60px;
+  padding: 35px 40px;
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 20px auto;
   background: linear-gradient(135deg, #fefcfb 0%, #faf9f7 100%);
   border: none;
   box-shadow: 
@@ -698,12 +699,13 @@ img {
 }
 
 .ceremony-section .countDown--title {
-  margin-bottom: 2.5em;
+  margin-bottom: 0.8em;
   position: relative;
-  padding-bottom: 1.2em;
+  padding-bottom: 0.3em;
   font-weight: 300;
   letter-spacing: 0.15em;
   color: #8f775b;
+  font-size: 3vw;
 }
 
 .ceremony-section .countDown--title::after {
@@ -739,22 +741,27 @@ img {
   text-align: center;
   font-family: var(--font-family);
   font-size: 1.75vw;
-  line-height: 2.2em;
+  line-height: 1.6em;
   color: #2b241b;
 }
 
 .ceremony-text {
-  margin-bottom: 2em;
+  margin-bottom: 1.2em;
   font-weight: 500;
   font-size: 2vw;
-  line-height: 2.4em;
+  line-height: 1.6em;
 }
 
 .ceremony-reception {
   color: #2b241b;
   font-style: normal;
-  line-height: 2.5em;
+  line-height: 1.8em;
   font-size: 1.85vw;
+}
+
+.reception-times {
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .reception-label {
@@ -763,7 +770,7 @@ img {
   color: #2b241b;
   font-style: normal;
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 .venue-name {
@@ -771,9 +778,9 @@ img {
   font-size: 1.3em;
   color: #2b241b;
   display: block;
-  margin: 0.8em 0 0.5em 0;
+  margin: 0.4em 0 0.3em 0;
   letter-spacing: 0.02em;
-  line-height: 1.4em;
+  line-height: 1.3em;
 }
 
 .venue-hall {
@@ -781,7 +788,7 @@ img {
   font-size: 1.15em;
   color: #8f775b;
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
   font-style: italic;
 }
 
@@ -790,8 +797,8 @@ img {
   font-size: 1.1em;
   color: #8f775b;
   display: block;
-  margin-bottom: 1em;
-  line-height: 1.6em;
+  margin-bottom: 0.5em;
+  line-height: 1.5em;
 }
 
 .venue-address {
@@ -799,8 +806,8 @@ img {
   font-size: 1.15em;
   color: #8f775b;
   display: block;
-  margin-bottom: 1em;
-  line-height: 1.6em;
+  margin-bottom: 0.5em;
+  line-height: 1.5em;
 }
 
 .date-highlight {
@@ -953,15 +960,16 @@ footer {
   }
 
   .wedding-info {
-    padding: 45px 30px;
-    margin: 40px 20px;
+    padding: 30px 25px;
+    margin: 15px 15px;
   }
 
   .wedding-info .countDown--title {
-    margin-bottom: 2.5em;
-    padding-bottom: 1em;
+    margin-bottom: 0.6em;
+    padding-bottom: 0.25em;
     font-weight: 300;
     letter-spacing: 0.1em;
+    font-size: 6vw;
   }
 
   .wedding-info--families {
@@ -976,97 +984,98 @@ footer {
 
   .family-title {
     font-size: 6vw;
-    margin-bottom: 2em;
-    padding-bottom: 1em;
+    margin-bottom: 1.2em;
+    padding-bottom: 0.6em;
     font-weight: 300;
     letter-spacing: 0.1em;
   }
 
   .family-details {
     font-size: 4.2vw;
-    line-height: 2.4em;
+    line-height: 1.8em;
   }
 
   .family-member {
     font-size: 4.6vw;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
     font-weight: 400;
   }
 
   .family-address {
     font-size: 3.9vw;
-    margin-top: 2em;
-    padding-top: 2em;
-    line-height: 2em;
+    margin-top: 1.2em;
+    padding-top: 1.2em;
+    line-height: 1.6em;
     font-weight: 300;
   }
 
   .wedding-info--couple {
     font-size: 4.6vw;
-    line-height: 2.6em;
-    padding-top: 2.5em;
-    margin-top: 2.5em;
+    line-height: 1.8em;
+    padding-top: 1.5em;
+    margin-top: 1.5em;
   }
 
   .couple-info {
     font-size: 5vw;
-    margin: 0.8em 0;
+    margin: 0.5em 0;
     font-weight: 400;
     letter-spacing: 0.02em;
   }
 
   .ceremony-section {
-    padding: 45px 30px;
-    margin: 40px 20px;
+    padding: 30px 25px;
+    margin: 15px 15px;
   }
 
   .ceremony-section .countDown--title {
-    margin-bottom: 2.5em;
-    padding-bottom: 1em;
+    margin-bottom: 0.6em;
+    padding-bottom: 0.25em;
     font-weight: 300;
     letter-spacing: 0.1em;
+    font-size: 6vw;
   }
 
   .ceremony-details {
     font-size: 4.5vw;
     max-width: 100%;
-    line-height: 2.5em;
+    line-height: 1.8em;
   }
 
   .ceremony-text {
     font-size: 5.5vw;
-    line-height: 2.8em;
-    margin-bottom: 2em;
+    line-height: 1.8em;
+    margin-bottom: 1.2em;
   }
 
   .ceremony-reception {
     font-size: 4.8vw;
-    line-height: 2.8em;
+    line-height: 1.8em;
   }
 
   .reception-label {
     font-size: 1.2em;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.3em;
   }
 
   .venue-name {
     font-size: 1.35em;
-    margin: 1em 0 0.6em 0;
+    margin: 0.4em 0 0.3em 0;
   }
 
   .venue-hall {
     font-size: 1.2em;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.3em;
   }
 
   .venue-details {
     font-size: 1.15em;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.5em;
   }
 
   .venue-address {
     font-size: 1.2em;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.5em;
   }
 
   .date-highlight {
