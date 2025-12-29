@@ -315,8 +315,22 @@ function App() {
         </div>
 
         <div className="wedding-info--couple" data-aos="zoom-out-up" data-aos-duration="1500">
-          <p className="couple-info">Trần Minh Huy (Trưởng nam)</p>
-          <p className="couple-info">Nguyễn Thị Ái Linh (Út Nữ)</p>
+          <div className="couple-portraits">
+            <div className="couple-portrait">
+              <div className="portrait-image">
+                <img src="/lh/huy.jpeg" alt="Trần Minh Huy" />
+              </div>
+              <p className="couple-info">Trần Minh Huy</p>
+              <p className="couple-relation">(Trưởng nam)</p>
+            </div>
+            <div className="couple-portrait">
+              <div className="portrait-image portrait-image-linh">
+                <img src="/lh/linh.jpeg" alt="Nguyễn Thị Ái Linh" />
+              </div>
+              <p className="couple-info">Nguyễn Thị Ái Linh</p>
+              <p className="couple-relation">(Út Nữ)</p>
+            </div>
+          </div>
         </div>
       </section>
 
