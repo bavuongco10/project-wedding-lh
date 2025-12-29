@@ -48,33 +48,57 @@ function App() {
     return () => clearInterval(interval)
   }, [])
 
-  // Auto-play music on page load
+  // Auto-play music on page load and handle touch/click interactions
   useEffect(() => {
+    let hasPlayed = false
+
     const playAudio = async () => {
-      if (audioRef.current) {
+      if (audioRef.current && !hasPlayed) {
         try {
           audioRef.current.volume = 0.7
           await audioRef.current.play()
+          hasPlayed = true
         } catch (error) {
-          // Autoplay was prevented by browser - user interaction required
-          console.log('Autoplay prevented:', error)
-          // Optionally, play on first user interaction
-          const playOnInteraction = () => {
-            if (audioRef.current) {
-              audioRef.current.play().catch(() => {})
-            }
-            document.removeEventListener('click', playOnInteraction)
-            document.removeEventListener('touchstart', playOnInteraction)
-          }
-          document.addEventListener('click', playOnInteraction, { once: true })
-          document.addEventListener('touchstart', playOnInteraction, { once: true })
+          // Autoplay was prevented by browser - will wait for user interaction
+          console.log('Autoplay prevented, waiting for user interaction')
         }
       }
     }
 
-    // Small delay to ensure audio is loaded
+    // Function to play on user interaction (touch or click)
+    const playOnInteraction = () => {
+      if (audioRef.current && !hasPlayed) {
+        // Check if already playing
+        if (!audioRef.current.paused) {
+          hasPlayed = true
+          return
+        }
+        
+        audioRef.current.volume = 0.7
+        audioRef.current.play().then(() => {
+          hasPlayed = true
+        }).catch(() => {
+          // If play fails, keep listeners active for retry
+        })
+      }
+    }
+
+    // Try to autoplay first
     const timer = setTimeout(playAudio, 500)
-    return () => clearTimeout(timer)
+
+    // Always add interaction listeners to play on touch/click anywhere
+    // Using capture phase and multiple event types for better mobile support
+    const options = { passive: true, capture: true }
+    document.addEventListener('click', playOnInteraction, options)
+    document.addEventListener('touchstart', playOnInteraction, options)
+    document.addEventListener('touchend', playOnInteraction, options)
+
+    return () => {
+      clearTimeout(timer)
+      document.removeEventListener('click', playOnInteraction, options)
+      document.removeEventListener('touchstart', playOnInteraction, options)
+      document.removeEventListener('touchend', playOnInteraction, options)
+    }
   }, [])
 
   const pad = (num) => (num < 10 ? '0' : '') + num
